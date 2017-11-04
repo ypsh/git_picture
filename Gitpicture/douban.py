@@ -113,7 +113,7 @@ if __name__ == '__main__':
         his = readfile()
         for item in htmlsUrl:
             if his.__contains__(item) == False:
-                for a in range(1,1):
+                for a in range(1,2):
                         try:
                             result = requests.get(item)
                             logging.info( "requests_time" +str(result.elapsed.microseconds))
