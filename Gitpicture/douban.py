@@ -105,7 +105,7 @@ def readfile():
 
 if __name__ == '__main__':
     initallog("","")
-    for i in range(1,5):
+    for i in range(1,400):
         url = 'https://www.dbmeinv.com/dbgroup/rank.htm?pager_offset='+ str(i)
         logging.info(url)
         htmlsUrl = get_html_url(url)
