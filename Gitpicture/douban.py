@@ -22,11 +22,11 @@ def dowmloadPic(html):
                 logging.info("can not download")
                 continue
             if re.match(".*?.jpg", each, re.IGNORECASE) is not None:
-                string = 'douban\\' + time.strftime('%Y-%m-%d_%H%M%S', time.localtime(time.time()))+ str(i) + '.jpg'
+                string = '/smb/webdev/' + time.strftime('%Y-%m-%d_%H%M%S', time.localtime(time.time()))+ str(i) + '.jpg'
             elif re.match(".*?.png", each, re.IGNORECASE) is not None:
-                string = 'douban\\' + time.strftime('%Y-%m-%d_%H%M%S', time.localtime(time.time())) + str(i) + '.png'
+                string = '/smb/webdev/' + time.strftime('%Y-%m-%d_%H%M%S', time.localtime(time.time())) + str(i) + '.png'
             elif re.match(".*?.gif", each, re.IGNORECASE) is not None:
-                string = 'douban\\' + time.strftime('%Y-%m-%d_%H%M%S', time.localtime(time.time())) + str(i) + '.gif'
+                string = '/smb/webdev/' + time.strftime('%Y-%m-%d_%H%M%S', time.localtime(time.time())) + str(i) + '.gif'
                 # resolve the problem of encode, make sure that chinese name could be store
             fp = open(string.decode('utf-8').encode('cp936'), 'wb')
             fp.write(pic.content)
