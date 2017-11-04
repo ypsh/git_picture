@@ -17,7 +17,7 @@ def dowmloadPic(html):
         if each.__len__() < 100 & each.find("\\") != -1 & each.find("user_normal") ==-1 & each.find("up") ==-1:
             logging.info( "path:  " + each )
             try:
-                pic = requests.get(each, timeout=30)
+                pic = requests.get(each, timeout=5)
             except requests.exceptions.ConnectionError:
                 logging.info("can not download")
                 continue
@@ -113,7 +113,7 @@ if __name__ == '__main__':
         his = readfile()
         for item in htmlsUrl:
             if his.__contains__(item) == False:
-                for a in range(1,3):
+                for a in range(1,1):
                         try:
                             result = requests.get(item)
                             logging.info( "requests_time" +str(result.elapsed.microseconds))
